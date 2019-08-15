@@ -11,6 +11,7 @@ import java.text.SimpleDateFormat;
 import db.DB;
 import db.DBIntegrityException;
 import db.DbException;
+import model.entities.Department;
 
 public class Program {
 
@@ -22,23 +23,12 @@ public class Program {
 
 		try {
 			conn = DB.getConnection();
-			
 			conn.setAutoCommit(false);
-			
 			st = conn.createStatement();
-			
-			int rows1 = st.executeUpdate("UPDATE seller SET BaseSalary = 5000 WHERE DepartmentId = 1");
-			
-			int x = 1;
-			if (x > 2 ) {
-				throw new SQLException("fake error");
-			}
-			
-			int rows2= st.executeUpdate("UPDATE seller SET BaseSalary = 3000 WHERE DepartmentId = 2");
-			
 			conn.commit();
 			
-			System.out.println(rows1 + rows2);
+			Department obj = new Department(1, "Books");
+			System.out.println(obj);
 
 		} catch (SQLException e) {
 			try {
