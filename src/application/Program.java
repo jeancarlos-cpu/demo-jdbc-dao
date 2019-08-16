@@ -41,6 +41,7 @@ public class Program {
 			seller.setEmail("notthefather@gmail.com");
 			seller.setBaseSalary(1000.00);
 			System.out.println(seller);
+			sellerDao.delete(5);
 
 	}
 }
