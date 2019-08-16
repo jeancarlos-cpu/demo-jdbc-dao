@@ -30,11 +30,6 @@ public class Program {
 			System.out.println();
 			list = sellerDao.searchAll();
 			list.forEach(System.out::println);
-			//////////////////////////////////////
-			//System.out.println();
-			//Seller s = new Seller(3, "Felipe Freitas Maia", "freitasmaiafelipe@gmail.com", sdf.parse("12/10/2003"), 5000.00, new Department(2, null));
-			//sellerDao.insert(s);
-			//////////////////////////////////////
 			System.out.println();
 			seller = sellerDao.find(13);
 			seller.setName("Not Anakin");
